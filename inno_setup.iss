@@ -1,4 +1,3 @@
-
 [Setup]
 AppName=Shuffle XLSX Tool
 AppVersion=1.0
@@ -9,7 +8,7 @@ Compression=lzma
 SolidCompression=yes
 
 [Files]
-Source: "dist\shuffle-rows-xlsx.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "dist\\shuffle-rows-xlsx.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
-Name: "{userdesktop}\Shuffle XLSX Tool"; Filename: "{app}\shuffle-rows-xlsx.exe"git add inno_setup.iss
+Name: "{userdesktop}\\Shuffle XLSX Tool"; Filename: "{app}\\shuffle-rows-xlsx.exe"
