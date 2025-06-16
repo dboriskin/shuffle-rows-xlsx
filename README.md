@@ -1,14 +1,18 @@
 
-# Shuffle Rows XLSX
+# Shuffle Bot for Telegram
 
 ## Как использовать
+1️⃣ Залей проект в GitHub  
+2️⃣ Подключи репозиторий на [Railway.app](https://railway.app/)  
+3️⃣ Добавь переменную окружения `TOKEN` со значением токена бота  
+4️⃣ Запусти сервис — бот готов принимать файлы
 
-1️⃣ Залей в приватный репозиторий `shuffle-rows-xlsx` на GitHub.  
-2️⃣ Перейди во вкладку **Actions**, запусти workflow `Build Installer`.  
-3️⃣ После завершения забери готовый `Setup_ShuffleRowsXlsx.exe` в артефактах.  
-4️⃣ Настя запускает установщик — выбирает папку, ярлык появляется на рабочем столе.  
+## Что делает бот
+- Принимает .xlsx файл
+- Обрабатывает (shuffle + твоя логика)
+- Отправляет обратно готовый файл
 
-## Что внутри
-- `shuffle-rows-xslx.py` — финальный скрипт с автосозданием папок и шаблоном  
-- `inno_setup.iss` — скрипт Inno Setup для создания установщика  
-- `.github/workflows/build-installer.yml` — Actions workflow для сборки EXE + инсталлятора
+## Файлы
+- `bot.py` — код бота
+- `requirements.txt` — зависимости
+- `Dockerfile` — для Railway
