@@ -1,0 +1,47 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# PyInstaller build folders
+build/
+dist/
+*.spec
+
+# Inno Setup outputs
+Setup_ShuffleRowsXlsx.exe
+
+# VSCode and IDEs
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# OS junk
+*.swp
+*.swo
+
+# GitHub Actions artifacts
+*.exe
+
+# Archive files
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Excel files
+*.xlsx
