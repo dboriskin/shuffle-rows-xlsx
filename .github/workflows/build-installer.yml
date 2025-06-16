@@ -22,7 +22,7 @@ jobs:
 
     - name: Build EXE
       run: |
-        pyinstaller --onefile shuffle-rows-xslx.py
+        pyinstaller --onefile shuffle-rows-xlsx.py
 
     - name: Install Inno Setup
       run: choco install innosetup -y
