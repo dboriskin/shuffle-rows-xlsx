@@ -12,4 +12,4 @@ SolidCompression=yes
 Source: "dist\shuffle-rows-xslx.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
-Name: "{desktop}\Shuffle XLSX Tool"; Filename: "{app}\shuffle-rows-xslx.exe"
+Name: "{userdesktop}\Shuffle XLSX Tool"; Filename: "{app}\shuffle-rows-xslx.exe"
