@@ -18,10 +18,13 @@ async def process_file(file_path):
 
 @dp.message(lambda msg: msg.document and msg.document.file_name.endswith('.xlsx'))
 async def handle_file(message: types.Message):
-    file = await message.document.download()
-    file_path = file.name
+    file_info = await bot.get_file(message.document.file_id)
+    file_path = f"/tmp/{message.document.file_name}"
+    await bot.download_file(file_info.file_path, file_path)
+    
     out_path = await process_file(file_path)
     await message.answer_document(types.FSInputFile(out_path))
+    
     os.remove(file_path)
     os.remove(out_path)
 
