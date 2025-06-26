@@ -10,7 +10,7 @@ from aiogram.types import FSInputFile
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from aiohttp import web
 
-API_TOKEN = os.getenv("BOT_TOKEN")
+API_TOKEN = os.getenv("TOKEN")
 WEBHOOK_PATH = "/webhook"
 WEBHOOK_URL = os.getenv("WEBHOOK_URL") + WEBHOOK_PATH
 
