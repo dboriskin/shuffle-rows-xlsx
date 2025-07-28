@@ -8,6 +8,7 @@ import tempfile
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.enums import ParseMode
 from aiogram.types import FSInputFile
+from tempfile import NamedTemporaryFile
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from aiohttp import web
 
@@ -105,7 +106,14 @@ async def handle_doc(message: types.Message, bot: Bot):
         return
     file = await bot.download(document)
     processed = process_xlsx(file.read())
-    await message.reply_document(FSInputFile(processed, filename="output.xlsx"))
+    
+    with NamedTemporaryFile(delete=False, suffix=".xlsx") as tmp:
+        tmp.write(processed.getvalue())
+        tmp_path = tmp.name
+
+    await message.reply_document(FSInputFile(tmp_path, filename="output.xlsx"))
+
+    os.remove(tmp_path)
 
 async def on_startup(bot: Bot):
     await bot.set_webhook(WEBHOOK_URL)
