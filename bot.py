@@ -14,8 +14,8 @@ from aiohttp import web
 import pandas as pd
 
 # === Config ===
-API_TOKEN = os.getenv("BOT_TOKEN")
-BASE_WEBHOOK_URL = os.getenv("BASE_WEBHOOK_URL")
+API_TOKEN = os.getenv("TOKEN")
+BASE_WEBHOOK_URL = os.getenv("WEBHOOK_URL")
 WEBHOOK_PATH = "/webhook"
 WEBHOOK_URL = BASE_WEBHOOK_URL + WEBHOOK_PATH
 
